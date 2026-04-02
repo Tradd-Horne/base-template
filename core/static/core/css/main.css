@@ -67,6 +67,178 @@
 
 
 /* ------------------------------------------------------------------------
+   Color Palettes
+   Applied via data-palette attribute on <html>
+   ------------------------------------------------------------------------ */
+
+/* Emerald */
+[data-palette="emerald"] {
+    --color-accent: #059669;
+    --color-accent-hover: #047857;
+    --color-accent-light: #ECFDF5;
+    --color-cta-gradient: linear-gradient(135deg, #059669, #10B981);
+}
+[data-palette="emerald"][data-theme="dark"] {
+    --color-accent: #34D399;
+    --color-accent-hover: #059669;
+    --color-accent-light: #064E3B;
+    --color-cta-gradient: linear-gradient(135deg, #059669, #34D399);
+}
+
+/* Slate Blue */
+[data-palette="slate-blue"] {
+    --color-accent: #3B82F6;
+    --color-accent-hover: #2563EB;
+    --color-accent-light: #EFF6FF;
+    --color-cta-gradient: linear-gradient(135deg, #3B82F6, #6366F1);
+}
+[data-palette="slate-blue"][data-theme="dark"] {
+    --color-accent: #60A5FA;
+    --color-accent-hover: #3B82F6;
+    --color-accent-light: #1E3A5F;
+    --color-cta-gradient: linear-gradient(135deg, #3B82F6, #60A5FA);
+}
+
+/* Rose */
+[data-palette="rose"] {
+    --color-accent: #E11D48;
+    --color-accent-hover: #BE123C;
+    --color-accent-light: #FFF1F2;
+    --color-cta-gradient: linear-gradient(135deg, #E11D48, #F43F5E);
+}
+[data-palette="rose"][data-theme="dark"] {
+    --color-accent: #FB7185;
+    --color-accent-hover: #E11D48;
+    --color-accent-light: #4C0519;
+    --color-cta-gradient: linear-gradient(135deg, #E11D48, #FB7185);
+}
+
+/* Amber */
+[data-palette="amber"] {
+    --color-accent: #D97706;
+    --color-accent-hover: #B45309;
+    --color-accent-light: #FFFBEB;
+    --color-cta-gradient: linear-gradient(135deg, #D97706, #F59E0B);
+}
+[data-palette="amber"][data-theme="dark"] {
+    --color-accent: #FBBF24;
+    --color-accent-hover: #D97706;
+    --color-accent-light: #451A03;
+    --color-cta-gradient: linear-gradient(135deg, #D97706, #FBBF24);
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   DEV PALETTE SELECTOR
+   ═══════════════════════════════════════════════════════════ */
+
+.palette-selector {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.palette-selector-toggle {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    padding: 10px 8px;
+    cursor: pointer;
+    box-shadow: -2px 2px 10px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    writing-mode: vertical-rl;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.05em;
+    font-family: var(--font-primary);
+}
+
+.palette-panel {
+    position: fixed;
+    right: -240px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-right: none;
+    border-radius: 12px 0 0 12px;
+    padding: 20px;
+    width: 240px;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+}
+
+.palette-panel.is-open {
+    right: 0;
+}
+
+.palette-panel h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 4px;
+}
+
+.palette-panel p {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    margin-bottom: 16px;
+}
+
+.palette-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    border: 2px solid transparent;
+    margin-bottom: 4px;
+}
+
+.palette-option:hover {
+    background: var(--color-bg);
+}
+
+.palette-option.is-active {
+    border-color: var(--color-accent);
+    background: var(--color-accent-light);
+}
+
+.palette-swatches {
+    display: flex;
+    gap: 4px;
+}
+
+.palette-swatch {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--color-border);
+}
+
+.palette-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+}
+
+
+/* ------------------------------------------------------------------------
    CSS Reset
    ------------------------------------------------------------------------ */
 

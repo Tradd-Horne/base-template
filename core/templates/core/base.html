@@ -112,6 +112,60 @@
         </div>
     </footer>
 
+    <!-- Dev Palette Selector -->
+    <div class="palette-selector" id="palette-selector">
+        <button class="palette-selector-toggle" id="palette-toggle">PALETTE</button>
+        <div class="palette-panel" id="palette-panel">
+            <h4>Color Palette</h4>
+            <p>Development only — pick a theme</p>
+
+            <div class="palette-option is-active" data-palette="indigo">
+                <div class="palette-swatches">
+                    <div class="palette-swatch" style="background: #6366F1;"></div>
+                    <div class="palette-swatch" style="background: #4F46E5;"></div>
+                    <div class="palette-swatch" style="background: #EEF2FF;"></div>
+                </div>
+                <span class="palette-name">Indigo</span>
+            </div>
+
+            <div class="palette-option" data-palette="emerald">
+                <div class="palette-swatches">
+                    <div class="palette-swatch" style="background: #059669;"></div>
+                    <div class="palette-swatch" style="background: #10B981;"></div>
+                    <div class="palette-swatch" style="background: #ECFDF5;"></div>
+                </div>
+                <span class="palette-name">Emerald</span>
+            </div>
+
+            <div class="palette-option" data-palette="slate-blue">
+                <div class="palette-swatches">
+                    <div class="palette-swatch" style="background: #3B82F6;"></div>
+                    <div class="palette-swatch" style="background: #6366F1;"></div>
+                    <div class="palette-swatch" style="background: #EFF6FF;"></div>
+                </div>
+                <span class="palette-name">Slate Blue</span>
+            </div>
+
+            <div class="palette-option" data-palette="rose">
+                <div class="palette-swatches">
+                    <div class="palette-swatch" style="background: #E11D48;"></div>
+                    <div class="palette-swatch" style="background: #F43F5E;"></div>
+                    <div class="palette-swatch" style="background: #FFF1F2;"></div>
+                </div>
+                <span class="palette-name">Rose</span>
+            </div>
+
+            <div class="palette-option" data-palette="amber">
+                <div class="palette-swatches">
+                    <div class="palette-swatch" style="background: #D97706;"></div>
+                    <div class="palette-swatch" style="background: #F59E0B;"></div>
+                    <div class="palette-swatch" style="background: #FFFBEB;"></div>
+                </div>
+                <span class="palette-name">Amber</span>
+            </div>
+        </div>
+    </div>
+
     <script src="{% static 'core/js/main.js' %}"></script>
     {% block extra_js %}{% endblock %}
 </body>

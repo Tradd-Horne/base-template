@@ -374,4 +374,55 @@
         }, 150);
     });
 
+
+    /* ═══════════════════════════════════════════════════════════
+       PALETTE SELECTOR (Development)
+       ═══════════════════════════════════════════════════════════ */
+
+    const paletteToggle = document.getElementById('palette-toggle');
+    const palettePanel = document.getElementById('palette-panel');
+    const paletteOptions = document.querySelectorAll('.palette-option');
+
+    if (paletteToggle && palettePanel) {
+        // Load saved palette
+        const savedPalette = localStorage.getItem('palette') || 'indigo';
+        document.documentElement.setAttribute('data-palette', savedPalette === 'indigo' ? '' : savedPalette);
+        paletteOptions.forEach(opt => {
+            opt.classList.toggle('is-active', opt.dataset.palette === savedPalette);
+        });
+
+        // Toggle panel
+        paletteToggle.addEventListener('click', () => {
+            palettePanel.classList.toggle('is-open');
+        });
+
+        // Close panel when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!palettePanel.contains(e.target) && e.target !== paletteToggle) {
+                palettePanel.classList.remove('is-open');
+            }
+        });
+
+        // Palette selection
+        paletteOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const palette = option.dataset.palette;
+
+                // Update active state
+                paletteOptions.forEach(opt => opt.classList.remove('is-active'));
+                option.classList.add('is-active');
+
+                // Apply palette
+                if (palette === 'indigo') {
+                    document.documentElement.removeAttribute('data-palette');
+                } else {
+                    document.documentElement.setAttribute('data-palette', palette);
+                }
+
+                // Save preference
+                localStorage.setItem('palette', palette);
+            });
+        });
+    }
+
 })();
