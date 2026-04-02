@@ -1,0 +1,155 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Builder — Modern Website Template{% endblock %}
+{% block meta_description %}A modern, minimal template for creators, makers, and builders who want a clean, professional web presence.{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+    <div class="hero-bg-accent"></div>
+    <div class="container">
+        <div class="hero-content animate-on-scroll">
+            <span class="hero-badge">Open Source Template</span>
+            <h1>Stay ahead. Think bigger.<br>Build smarter.</h1>
+            <p class="hero-subtitle">A modern template for creators, makers, and builders who want a clean, professional web presence. Start with a solid foundation and make it yours.</p>
+            <div class="hero-actions">
+                <a href="#cta" class="btn btn-primary btn-lg">Get Started Free</a>
+                <a href="#features" class="btn btn-secondary btn-lg">See Features</a>
+            </div>
+            <div class="hero-proof">
+                <div class="hero-avatars">
+                    <span class="avatar" style="background: #6366F1;">T</span>
+                    <span class="avatar" style="background: #8B5CF6;">M</span>
+                    <span class="avatar" style="background: #A78BFA;">S</span>
+                    <span class="avatar" style="background: #C4B5FD;">R</span>
+                </div>
+                <p class="hero-proof-text">Trusted by <strong>500+</strong> builders worldwide</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="section features-section" id="features">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <span class="section-label">Features</span>
+            <h2>Everything you need</h2>
+            <p class="section-subtitle">Built with modern best practices so you can focus on what matters — shipping your product and growing your audience.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                    </svg>
+                </div>
+                <h3>Lightning Fast</h3>
+                <p>Optimised for speed with minimal dependencies, clean markup, and efficient asset loading. Your visitors won't wait.</p>
+            </div>
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                </div>
+                <h3>Secure by Default</h3>
+                <p>Production-ready security headers, CSRF protection, and SSL support baked in. Deploy with confidence from day one.</p>
+            </div>
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                    </svg>
+                </div>
+                <h3>Developer Friendly</h3>
+                <p>Clean code structure with Django templates, Docker support, and clear conventions. Easy to extend and customise.</p>
+            </div>
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
+                    </svg>
+                </div>
+                <h3>Built to Scale</h3>
+                <p>From a simple landing page to a full SaaS application. The architecture grows with you without getting in the way.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="section about-section" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-content animate-on-scroll">
+                <span class="section-label">About</span>
+                <h2>Built for builders</h2>
+                <p>This template was created for people who ship. Whether you're launching a SaaS product, building a personal brand, or creating a content hub, you need a foundation that's both beautiful and functional.</p>
+                <p>We've taken the guesswork out of design decisions. Every colour, spacing value, and component has been carefully chosen to create a cohesive, professional look that works across devices and in both light and dark modes.</p>
+                <blockquote class="highlight-quote">
+                    <p>"The best template is one you don't have to fight against. It should feel like a head start, not a constraint."</p>
+                </blockquote>
+            </div>
+            <div class="about-image animate-on-scroll">
+                <div class="about-image-placeholder">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <polyline points="21 15 16 10 5 21"/>
+                    </svg>
+                    <span>Your image here</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Resources Section -->
+<section class="section resources-section" id="resources">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <span class="section-label">Resources</span>
+            <h2>Learn and grow</h2>
+            <p class="section-subtitle">Guides, tutorials, and insights to help you make the most of your project.</p>
+        </div>
+        <div class="resources-grid">
+            <article class="resource-card animate-on-scroll">
+                <div class="resource-category">Guide</div>
+                <h3><a href="#">Getting Started with Django Templates</a></h3>
+                <p>Learn the fundamentals of Django's template system and how to build reusable, maintainable templates for your projects.</p>
+                <a href="#" class="resource-link">Read more &rarr;</a>
+            </article>
+            <article class="resource-card animate-on-scroll">
+                <div class="resource-category">Tutorial</div>
+                <h3><a href="#">Deploying with Docker Compose</a></h3>
+                <p>A step-by-step walkthrough of deploying your Django application using Docker Compose, Nginx, and PostgreSQL.</p>
+                <a href="#" class="resource-link">Read more &rarr;</a>
+            </article>
+            <article class="resource-card animate-on-scroll">
+                <div class="resource-category">Insight</div>
+                <h3><a href="#">Designing for Dark Mode</a></h3>
+                <p>Best practices for implementing dark mode that respects user preferences and maintains readability across themes.</p>
+                <a href="#" class="resource-link">Read more &rarr;</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section cta-section" id="cta">
+    <div class="container">
+        <div class="cta-content animate-on-scroll">
+            <h2>Ready to get started?</h2>
+            <p class="cta-subtitle">Clone the repo, customise the design, and ship your project. It's that simple.</p>
+            <div class="cta-actions">
+                <a href="#" class="btn btn-white btn-lg">Start Building</a>
+                <a href="#" class="btn btn-outline-white btn-lg">View on GitHub</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
